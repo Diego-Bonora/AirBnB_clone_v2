@@ -6,14 +6,14 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello():
-    """ Double coment """
+def hello_hbnb():
+    """ First app rout for the proyect """
     return "Hello HBNB!"
 
 
 @app.route('/hbnb', strict_slashes=False)
-def hello():
-    """ Double coment """
+def hbnb():
+    """ Second app rout for the proyect """
     return "HBNB"
 
 
