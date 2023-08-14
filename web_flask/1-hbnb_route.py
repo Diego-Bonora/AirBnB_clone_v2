@@ -7,13 +7,13 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def hello():
-    """ coment """
+    """ Double coment """
     return "Hello HBNB!"
 
 
 @app.route('/hbnb', strict_slashes=False)
 def hello():
-    """ coment """
+    """ Double coment """
     return "HBNB"
 
 
