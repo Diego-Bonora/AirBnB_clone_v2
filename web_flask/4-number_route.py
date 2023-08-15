@@ -37,7 +37,6 @@ def n(n):
     """ fifth app rout for the proyect """
     if n.isdigit():
         return "{} is a number".format(n)
-    return
 
 
 if __name__ == "__main__":
