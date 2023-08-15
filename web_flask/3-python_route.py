@@ -28,7 +28,7 @@ def c(text):
 def python(text="is_cool"):
     """ fourth app rout for the proyect """
     text_no_underscore = text.replace("_", " ")
-    return "C {}".format(text_no_underscore)
+    return "Python {}".format(text_no_underscore)
 
 
 if __name__ == "__main__":
