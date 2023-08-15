@@ -24,8 +24,8 @@ def c(text):
     return "C {}".format(text_no_underscore)
 
 
-@app.route('/python/<text>', strict_slashes=False)
-def python(text="is_cool"):
+@app.route('/python/<text>', strict_slashes=False, defaults={'text': 'is_cool'})
+def python(text):
     """ fourth app rout for the proyect """
     text_no_underscore = text.replace("_", " ")
     return "Python {}".format(text_no_underscore)
