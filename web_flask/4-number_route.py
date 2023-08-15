@@ -32,8 +32,8 @@ def python(text="is_cool"):
     return "Python {}".format(text_no_underscore)
 
 
-@app.route('/number/<n>', strict_slashes=False)
-def n(n=0):
+@app.route('/number/<int:n>', strict_slashes=False)
+def n(n):
     """ fifth app rout for the proyect """
     if n.isdigit():
         return "{} is a number".format(n)
