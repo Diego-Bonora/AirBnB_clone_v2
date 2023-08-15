@@ -4,6 +4,7 @@ from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.orm import relationship
 import os
+from models.city import City
 
 
 class State(BaseModel, Base):
@@ -17,11 +18,7 @@ class State(BaseModel, Base):
         @property
         def cities(self):
             from models import storage
-            cities = []
-            for key, value in storage.__objects.items():
-                splited_key = key.split('.')
-                if splited_key[0] == 'City':
-                    cities.append(value)
+            cities = storage.all(City)
             filtered_cities = list(
                 filter(lambda x: x.state_id == self.id), cities)
             return filtered_cities
