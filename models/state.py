@@ -24,5 +24,5 @@ class State(BaseModel, Base):
                 if splited_key[0] == 'City':
                     cities.append(value)
             filtered_cities = list(
-                filter(lambda x: x.state_id == self.id), cities)
+                filter(lambda x: x.state_id == self.id, cities))
             return filtered_cities
