@@ -44,12 +44,12 @@ class Place(BaseModel, Base):
         def reviews(self):
             from models import storage
             reviews = []
-            for key, value in storage.__objects.items():
+            for key, value in storage._FileStorage__objects.items():
                 splited_key = key.split('.')
                 if splited_key[0] == 'Review':
                     reviews.append(value)
             filtered_reviews = list(
-                filter(lambda x: x.place_id == self.id), reviews)
+                filter(lambda x: x.place_id == self.id, reviews))
             return filtered_reviews
 
         @property
