@@ -33,7 +33,7 @@ def python(text="is_cool"):
 
 
 @app.route('/number/<n>', strict_slashes=False)
-def n(n):
+def n(n=0):
     """ fifth app rout for the proyect """
     if n.isdigit():
         return "{} is a number".format(n)
