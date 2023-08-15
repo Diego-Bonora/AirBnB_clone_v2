@@ -32,13 +32,13 @@ def python(text="is_cool"):
     return "Python {}".format(text_no_underscore)
 
 
-@app.route('/number/<int:n>/', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def n(n):
     """ prints a number """
     return "{} is a number".format(n)
 
 
-@app.route('/number_template/<int:n>/', strict_slashes=False)
+@app.route('/number_template/<int:n>', strict_slashes=False)
 def num_temp(n):
     """ renders a template with a given number """
     return render_template('5-number.html', n=n)
