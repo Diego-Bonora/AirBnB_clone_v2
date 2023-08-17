@@ -43,6 +43,8 @@
   display: none;
   background-color: #fafafa;
   width: 90%;
+  max-height: 300px;
+  overflow: auto;
 
   margin-left: -1px;
   margin-top: 33px;
